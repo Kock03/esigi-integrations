@@ -11,6 +11,11 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# images
+.jpg
+.png
+.jpeg
+
 # OS
 .DS_Store
 
