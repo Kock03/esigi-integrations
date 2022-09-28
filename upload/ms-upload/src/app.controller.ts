@@ -19,7 +19,6 @@ export class AppController {
     }),
   )
   async uploadedFile(@UploadedFile() file) {
-    console.log(file)
     const response = {
       originalname: file.originalname,
       filename: file.filename,
@@ -51,6 +50,8 @@ export class AppController {
 
   @Get(':imgpath')
   seeUploadedFile(@Param('imgpath') image, @Res() res) {
+    let url = image.split('.')
+    console.log("🚀 ~ file: app.controller.ts ~ line 54 ~ AppController ~ seeUploadedFile ~ url", url)
     return res.sendFile(image, { root: '../files' });
   }
 }
